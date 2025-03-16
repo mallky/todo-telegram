@@ -1,0 +1,20 @@
+{
+  "name": "todo-telegram-bot",
+  "version": "1.0.0",
+  "description": "A Telegram bot for managing and prioritizing tasks",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "mysql2": "^3.6.5",
+    "node-schedule": "^2.1.1",
+    "node-telegram-bot-api": "^0.64.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
