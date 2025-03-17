@@ -26,7 +26,7 @@ const Task = {
       "INSERT INTO tasks (user_id, text, priority, due_date) VALUES (?, ?, ?, ?)",
       [userId, text, priority, dueDate]
     );
-    return result[0].insertId;
+    return result.insertId;
   },
 
   async findByUserId(userId) {
@@ -90,7 +90,7 @@ const Task = {
       "UPDATE tasks SET completed = true WHERE id = ? AND user_id = ?",
       [taskId, userId]
     );
-    return result[0].affectedRows > 0;
+    return result.affectedRows > 0;
   },
 
   async delete(taskId, userId) {
@@ -98,7 +98,7 @@ const Task = {
       "DELETE FROM tasks WHERE id = ? AND user_id = ?",
       [taskId, userId]
     );
-    return result[0].affectedRows > 0;
+    return result.affectedRows > 0;
   },
 
   // Initialize database table
